@@ -9,7 +9,7 @@ var runCalc = 0;
 var runCalc2 = 0;
 var secondCalc;
 var secondGoAround;
-var thirdNumber = 0;
+var thirdNumber;
 var firstNumber = (userInput[0] = prompt("This calculator allow you to calculate up to three(3) at a time \n What is your first number?"));
 if (userInput[0] != Number(firstNumber)){
     alert("We're sorry, but "+ userInput[0] + " is not a number");
@@ -83,19 +83,17 @@ if ((secondGoAround == true) && ((userInput[4] === "/")||(userInput[4] === "+")|
 }
 thirdNumber = prompt("What is your third number?");
 
-
 if (runCalc2 == 1){
-    secondResults = (firstResults / thirdNumberNumber)
+    secondResults = (firstResults / thirdNumber);
 }else if (runCalc2 == 2) {
-    secondResults = (firstResults + thirdNumberNumber)
+    secondResults = (firstResults + thirdNumber);
 }else if (runCalc2 == 3) {
-    secondResults = (firstResults - thirdNumberNumber)
+    secondResults = (firstResults - thirdNumber);
 }else if (runCalc2 == 4) {
-    secondResults = (firstResults * thirdNumberNumber)
+    secondResults = (firstResults * thirdNumber);
 }else {
-    console.log("I am surprised that this code did not work after all the hours placed into perfecting it.")
+    console.log("I am surprised that this code did not work after all the hours placed into perfecting it.");
 }
-
-
+console.log("Your final calculation of ("+firstNumber+" "+firstOperator+" "+secondNumber+")"+secondCalc+" "+thirdNumber+" is "+secondResults);
 
 
