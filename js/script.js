@@ -4,9 +4,12 @@
 
 var userInput = [0,0,0,0,0];
 var firstResults = 0;
+var secondResults = 0;
 var runCalc = 0;
+var runCalc2 = 0;
 var secondCalc;
 var secondGoAround;
+var thirdNumber = 0;
 var firstNumber = (userInput[0] = prompt("This calculator allow you to calculate up to three(3) at a time \n What is your first number?"));
 if (userInput[0] != Number(firstNumber)){
     alert("We're sorry, but "+ userInput[0] + " is not a number");
@@ -55,9 +58,43 @@ if (runCalc == 1){
 
 secondGoAround = confirm("Would you like to add another operation to the equation :"+ firstNumber + firstOperator+ secondNumber+ " ? \n Click OK to add another operation, \n Click Cancel to calculate results. ");
 
-(secondGoAround == true) ? (secondCalc = prompt("Ok so what is your second operator? \n type'/' to divide. \n type '*' to multiply. \n type '+' to add. \n type '-' to subtract.")) : (console.log(firstResults));
+(secondGoAround == true) ? (secondCalc = prompt("Ok so what is your second operator? \n type'/' to divide. \n type '*' to multiply. \n type '+' to add. \n type '-' to subtract.")) : (console.log("Your results are "+ firstResults));
+userInput[4] = secondCalc;
+if ((secondGoAround == true) && ((userInput[4] === "/")||(userInput[4] === "+")||(userInput[4] === "-")||(userInput[4] === "*"))) {
+    if (userInput[4] == "") {
+        console.log("Nothing was entered... ");
+    }else if (userInput[4] === "/"){
+        console.log("Ok lets Divide");
+        runCalc2 = 1;
+    }else if (userInput[4] === "+"){
+        console.log("Ok lets Add");
+        runCalc2 = 2;
+    }else if (userInput[4] === "-"){
+        console.log("Ok lets Subtract");
+        runCalc2 = 3
+    }else if (userInput[4] === "*"){
+        console.log("Ok lets Multiply");
+        runCalc2 = 4
+    }else {
+        console.log("That was not a valid operator")
+    }
+}else {
+    console.log("Error at second second Calculation");
+}
+thirdNumber = prompt("What is your third number?");
 
 
+if (runCalc2 == 1){
+    secondResults = (firstResults / thirdNumberNumber)
+}else if (runCalc2 == 2) {
+    secondResults = (firstResults + thirdNumberNumber)
+}else if (runCalc2 == 3) {
+    secondResults = (firstResults - thirdNumberNumber)
+}else if (runCalc2 == 4) {
+    secondResults = (firstResults * thirdNumberNumber)
+}else {
+    console.log("I am surprised that this code did not work after all the hours placed into perfecting it.")
+}
 
 
 
