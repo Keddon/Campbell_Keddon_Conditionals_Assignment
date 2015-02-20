@@ -10,6 +10,10 @@ var runCalc2 = 0;
 var secondCalc;
 var secondGoAround;
 var thirdNumber;
+
+
+
+
 var firstNumber = (userInput[0] = prompt("This calculator allow you to calculate up to three(3) at a time \n What is your first number?"));
 if (userInput[0] != Number(firstNumber)){
     alert("We're sorry, but "+ userInput[0] + " is not a number");
@@ -45,13 +49,13 @@ if (userInput[2] != Number(secondNumber)) {
 }
 
 if (runCalc == 1){
-    firstResults = (firstNumber / secondNumber)
+    firstResults = (Number(firstNumber) / Number(secondNumber))
 }else if (runCalc == 2) {
-    firstResults = (firstNumber + secondNumber)
+    firstResults = (Number(firstNumber) + Number(secondNumber))
 }else if (runCalc == 3) {
-    firstResults = (firstNumber - secondNumber)
+    firstResults = (Number(firstNumber) - Number(secondNumber))
 }else if (runCalc == 4) {
-    firstResults = (firstNumber * secondNumber)
+    firstResults = (Number(firstNumber) * Number(secondNumber))
 }else {
     console.log("I am surprised that this code did not work after all the hours placed into perfecting it.")
 }
@@ -81,16 +85,22 @@ if ((secondGoAround == true) && ((userInput[4] === "/")||(userInput[4] === "+")|
 }else {
     console.log("Error at second second Calculation");
 }
-thirdNumber = prompt("What is your third number?");
+thirdNumber = (userInput[5] = prompt("What is your third number?"));
+if (userInput[5] != Number(thirdNumber)) {
+    alert("We're sorry, but "+ userInput[5] + " is not a number");
+    console.log("We're sorry, but "+ userInput[5] + " is not a number");
+}else if (userInput[5] == "") {
+    console.log("Nothing was entered..");
+}
 
 if (runCalc2 == 1){
-    secondResults = (firstResults / thirdNumber);
+    secondResults = (Number(firstResults) / Number(thirdNumber));
 }else if (runCalc2 == 2) {
-    secondResults = (firstResults + thirdNumber);
+    secondResults = (Number(firstResults) + Number(thirdNumber));
 }else if (runCalc2 == 3) {
-    secondResults = (firstResults - thirdNumber);
+    secondResults = (Number(firstResults) - Number(thirdNumber));
 }else if (runCalc2 == 4) {
-    secondResults = (firstResults * thirdNumber);
+    secondResults = (Number(firstResults) * Number(thirdNumber));
 }else {
     console.log("I am surprised that this code did not work after all the hours placed into perfecting it.");
 }
