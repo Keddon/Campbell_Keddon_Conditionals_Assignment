@@ -14,23 +14,23 @@ var thirdNumber;
 
 
 
-var firstNumber = (userInput[0] = prompt("This calculator allow you to calculate up to three(3) at a time \n What is your first number?"));
-if (userInput[0] != Number(firstNumber)){
+var firstNumber = (userInput[0] = prompt("This calculator allow you to calculate up to three(3) at a time \n What is your first number?")); //takes in user input for the first number
+if (userInput[0] != Number(firstNumber)){       //validates that user input
     alert("We're sorry, but "+ userInput[0] + " is not a number");
     console.log("We're sorry, but "+ userInput[0] + " is not a number");
-}else if (userInput[0] == ""){
+}else if (userInput[0] == ""){  //validates user input
     alert("Nothing was entered..");
     console.log("Nothing was entered..")
 }else {
     console.log("Okay, the first number is "+ firstNumber);
 
-    var firstOperator = (userInput[1] = prompt("Ok, so your first number is "+ userInput[0] +". What is your operator \n type'/' to divide. \n type '*' to multiply. \n type '+' to add. \n type '-' to subtract."));
+    var firstOperator = (userInput[1] = prompt("Ok, so your first number is "+ userInput[0] +". What is your operator \n type'/' to divide. \n type '*' to multiply. \n type '+' to add. \n type '-' to subtract.")); //decides what operation the user wants to use
     if (userInput[1] == "") {
         console.log("Nothing was entered... ");
-    }else if (firstOperator === "/"){
+    }else if (firstOperator === "/"){ // validates the operation to be used
         console.log("Ok lets Divide");
         runCalc = 1;
-        var secondNumber = (userInput[2] = prompt("What is the number you would like "+ userInput[0] + " to be "+ firstOperator +" by?"));
+        var secondNumber = (userInput[2] = prompt("What is the number you would like "+ userInput[0] + " to be "+ firstOperator +" by?")); //takes the second number from the user
         if (userInput[2] != Number(secondNumber)) {
             alert("We're sorry, but "+ userInput[2] + " is not a number");
             console.log("We're sorry, but "+ userInput[2] + " is not a number");
@@ -61,7 +61,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else{
-                            console.log("Okay the third number is"+ thirdNumber);
+                            console.log("Okay the third number is "+ thirdNumber);
                             if (runCalc2 == 1){
                                 secondResults = (Number(firstResults) / Number(thirdNumber));
 
@@ -83,7 +83,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 2) {
                                 secondResults = (Number(firstResults) + Number(thirdNumber));
 
@@ -103,7 +103,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 3) {
                                 secondResults = (Number(firstResults) - Number(thirdNumber));
 
@@ -123,7 +123,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 4) {
                                 secondResults = (Number(firstResults) * Number(thirdNumber));
 
@@ -177,7 +177,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else{
-                            console.log("Okay the third number is"+ thirdNumber);
+                            console.log("Okay the third number is "+ thirdNumber);
                             if (runCalc2 == 1){
                                 secondResults = (Number(firstResults) / Number(thirdNumber));
 
@@ -199,7 +199,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 2) {
                                 secondResults = (Number(firstResults) + Number(thirdNumber));
 
@@ -219,7 +219,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 3) {
                                 secondResults = (Number(firstResults) - Number(thirdNumber));
 
@@ -239,7 +239,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 4) {
                                 secondResults = (Number(firstResults) * Number(thirdNumber));
 
@@ -293,7 +293,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else{
-                            console.log("Okay the third number is"+ thirdNumber);
+                            console.log("Okay the third number is "+ thirdNumber);
                             if (runCalc2 == 1){
                                 secondResults = (Number(firstResults) / Number(thirdNumber));
 
@@ -315,7 +315,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 2) {
                                 secondResults = (Number(firstResults) + Number(thirdNumber));
 
@@ -335,7 +335,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 3) {
                                 secondResults = (Number(firstResults) - Number(thirdNumber));
 
@@ -409,7 +409,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else{
-                            console.log("Okay the third number is"+ thirdNumber);
+                            console.log("Okay the third number is "+ thirdNumber);
                             if (runCalc2 == 1){
                                 secondResults = (Number(firstResults) / Number(thirdNumber));
                                 console.log("Your answer is "+ secondResults);
@@ -432,7 +432,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 2) {
                                 secondResults = (Number(firstResults) + Number(thirdNumber));
                                 console.log("Your answer is "+ secondResults);
@@ -454,7 +454,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 3) {
                                 secondResults = (Number(firstResults) - Number(thirdNumber));
                                 console.log("Your answer is "+ secondResults);
@@ -475,7 +475,7 @@ if (userInput[0] != Number(firstNumber)){
                         }else if (userInput[5] == "") {
                             console.log("Nothing was entered..");
                         }else {
-                            console.log("Okay the third number is" + thirdNumber);
+                            console.log("Okay the third number is " + thirdNumber);
                             if (runCalc2 == 4) {
                                 secondResults = (Number(firstResults) * Number(thirdNumber));
                                 console.log("Your answer is "+ secondResults);
