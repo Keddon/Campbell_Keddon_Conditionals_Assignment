@@ -20,6 +20,8 @@ if (userInput[0] != Number(firstNumber)){
     console.log("We're sorry, but "+ userInput[0] + " is not a number");
 }else if (userInput[0] == ""){
     console.log("Nothing was entered..")
+}else {
+    console.log("okay The firs number is "+ firstNumber);
 }
 var firstOperator = (userInput[1] = prompt("Ok, so your first number is "+ userInput[0] +". What is your operator \n type'/' to divide. \n type '*' to multiply. \n type '+' to add. \n type '-' to subtract."));
 if (userInput[1] == "") {
@@ -46,7 +48,10 @@ if (userInput[2] != Number(secondNumber)) {
     console.log("We're sorry, but "+ userInput[2] + " is not a number");
 }else if (userInput[2] == "") {
     console.log("Nothing was entered..");
+}else{
+    console.log("Okay the second number is "+ secondNumber);
 }
+
 
 if (runCalc == 1){
     firstResults = (Number(firstNumber) / Number(secondNumber))
